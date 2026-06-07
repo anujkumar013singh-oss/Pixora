@@ -1,0 +1,22 @@
+services:
+  # Backend API
+  - type: web
+    name: pixora-backend
+    runtime: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5001
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: STORAGE_BACKEND
+        value: gridfs
+      - key: FRONTEND_URL
+        sync: false
+      - key: BACKEND_URL
+        sync: false
