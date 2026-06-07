@@ -80,7 +80,36 @@ The app will be running at:
 
 ## 🚀 Deployment
 
-### Backend (Render.com)
+### **Quick Deploy to Vercel** (Recommended)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/anujkumar013singh-oss/Pixora)
+
+**Full Guide**: See [DEPLOYMENT_VERCEL.md](./DEPLOYMENT_VERCEL.md) for complete step-by-step instructions.
+
+### **Quick Steps:**
+
+1. **Via Vercel Dashboard:**
+   - Go to [vercel.com/new](https://vercel.com/new)
+   - Import your Pixora repository
+   - Add environment variables (MongoDB URI, JWT Secret, etc.)
+   - Deploy!
+
+2. **Via Vercel CLI:**
+   ```bash
+   npm install -g vercel
+   cd "/Users/anuj/Documents/traial/test 2"
+   vercel --prod
+   ```
+
+**Environment Variables Needed:**
+- `MONGODB_URI` - Your MongoDB connection string
+- `JWT_SECRET` - Your secret key
+- `STORAGE_BACKEND` - Set to `gridfs`
+- `FRONTEND_URL` - Your Vercel URL
+- `BACKEND_URL` - Your Vercel URL
+- `VITE_API_URL` - Your Vercel URL + `/api`
+
+### Alternative: Backend (Render.com)
 
 1. Go to [Render.com](https://render.com)
 2. Click "New" → "Web Service"
