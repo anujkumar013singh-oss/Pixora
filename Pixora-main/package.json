@@ -1,0 +1,26 @@
+{
+  "name": "pixora",
+  "version": "1.0.0",
+  "description": "File hosting platform with shareable links",
+  "scripts": {
+    "install-all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "start": "npm start --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anujkumar013singh-oss/Pixora.git"
+  },
+  "keywords": [
+    "file-hosting",
+    "file-sharing",
+    "react",
+    "nodejs",
+    "mongodb",
+    "gridfs"
+  ],
+  "author": "Anuj Kumar Singh",
+  "license": "MIT"
+}

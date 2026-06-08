@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black:       #000000;
+  --surface-1:   #0a0a0a;
+  --surface-2:   #111111;
+  --surface-3:   #1a1a1a;
+  --border:      #2a2a2a;
+  --muted:       #888888;
+  --white:       #ffffff;
+  --accent:      #0057FF;
+  --accent-dim:  #0057FF22;
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  
+  body {
+    @apply bg-black text-white antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+  }
+}
+
+.electric-glow {
+  box-shadow: 0 0 20px var(--accent-dim);
+}
+
+.electric-glow-strong:hover {
+  box-shadow: 0 0 30px #0057FF44;
+}
+
+.text-reveal-char {
+  display: inline-block;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-surface-3 rounded-full hover:bg-accent transition-colors;
+}
+
+/* Sharp edges as per design rules */
+.btn-sharp {
+  border-radius: 4px;
+}
