@@ -27,6 +27,10 @@ app.use('/api/conversion', conversionRoutes);
 app.use('/api/history', historyRoutes);
 app.use('/s', redirectRoutes);
 
+app.get('/', (req, res) => {
+  res.json({ name: 'Pixora API', status: 'running' });
+});
+
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
